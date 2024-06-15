@@ -1,0 +1,7 @@
+{
+  "name": "Herbalist",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
