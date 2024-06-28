@@ -6,13 +6,15 @@ import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular/standalo
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
 import { environment } from './environments/environment';
+import { DecimalPipe } from '@angular/common';
 
 if (environment.production) {
   enableProdMode();
 }
 
 bootstrapApplication(AppComponent, {
-  providers: [
+  providers: [ 
+    DecimalPipe,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     provideIonicAngular(),
     provideRouter(routes, withPreloading(PreloadAllModules)),
