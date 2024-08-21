@@ -80,6 +80,7 @@ export class HomePage implements OnInit, OnDestroy {
     name: '',
     phoneNumber: '',
     date: '',
+    time: '',
     message: '',
   };
 

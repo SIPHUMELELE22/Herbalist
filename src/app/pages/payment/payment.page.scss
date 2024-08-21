@@ -1,0 +1,59 @@
+.input {
+  font-size: 300;
+  color: #000;
+}
+
+.ion-padding {
+  ion-item {
+    --background: #f1f1f1;
+    border-radius: 30px;
+    margin-bottom: 16px;
+  }
+  ion-img {
+    width: 100%;
+    height: 18vh;
+    border-radius: 5px;
+  }
+}
+
+/* Styling the ion-accordion */
+ion-accordion {
+  --background: #ffffff;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+ion-accordion ion-item {
+  --background: #e0e0e0;
+  --border-radius: 8px 8px 0 0;
+  font-weight: bold;
+  color: #9D0A10;
+}
+
+ion-accordion div[slot="content"] {
+  padding: 16px;
+  --background: #ffffff;
+  --border-radius: 0 0 8px 8px;
+}
+
+/* Styling for the note */
+ion-item ion-label {
+  font-size: 1.2em;
+  color: #9D0A10;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Styling for ion-button */
+ion-button {
+  --background: #ffffff;
+  --color: #ffffff;
+  --border-radius: 20px;
+  margin-top: 16px;
+}
+
+/* Styling for ion-icon */
+ion-icon {
+  color: #ffffff;
+}

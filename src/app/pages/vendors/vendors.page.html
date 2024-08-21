@@ -1,5 +1,5 @@
 <ion-header>
-    <ion-toolbar color="danger">
+    <ion-toolbar>
       <ion-title>Vendors</ion-title>
       <ion-buttons slot="end" mode="md" [routerLink]="['/home']">
         <ion-button>
@@ -9,6 +9,7 @@
       </ion-buttons>
     </ion-toolbar>
   </ion-header>
+  <ion-searchbar mode="ios" placeholder="Search vendor" (ionInput)="vendorList($event)"></ion-searchbar>
   <ion-content>
     <div  *ngFor="let vendor of vendorList">
 

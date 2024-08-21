@@ -32,12 +32,10 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar>
-    <ion-button size="large"shape="round" expand="block" [strong]="true" mode="ios"
-    [color]="addToCart ? 'success' : 'primary'"
-    (click)="addItem()">
-      <ion-icon [name]="addToCart ? 'bag-handle' : 'bag-handle-outline'" slot="end"></ion-icon>
-      <ion-text>{{addToCart || 'Add to Cart'}}</ion-text>
-    </ion-button>
-  </ion-toolbar>
+  <ion-button size="large"shape="round" expand="block" [strong]="true" mode="ios"
+  [color]="addToCart ? 'success' : 'primary'"
+  (click)="addItem()">
+    <ion-icon [name]="addToCart ? 'bag-handle' : 'bag-handle-outline'" slot="end"></ion-icon>
+    <ion-text>{{addToCart || 'Add to Cart'}}</ion-text>
+  </ion-button>
 </ion-footer>

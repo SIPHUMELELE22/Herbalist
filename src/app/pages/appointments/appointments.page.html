@@ -1,5 +1,5 @@
   <ion-header>
-    <ion-toolbar color="danger">
+    <ion-toolbar>
       <ion-title>Appointments</ion-title>
       <ion-buttons slot="end" mode="md" [routerLink]="['/home']">
         <ion-button>
@@ -17,6 +17,8 @@
           <ion-label>
             <p><strong> <ion-text>Date: </ion-text></strong>
               {{appointmentData.date}}</p>
+              <p><strong> <ion-text>Time: </ion-text></strong>
+                {{appointmentData.time}}</p>
             <p><strong><ion-text>Phone Number: </ion-text></strong>
               {{appointmentData.phoneNumber}}</p>
           </ion-label>
@@ -28,7 +30,7 @@
        </ion-button>
       <ion-button fill="clear">
         <ion-icon slot="start" name="trash-outline" color="danger"></ion-icon>
-        Delete
+        Cancel
       </ion-button>
     </ion-card>
 </ion-content>

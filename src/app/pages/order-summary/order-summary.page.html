@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="danger">
+  <ion-toolbar>
     <ion-title>Order Summary</ion-title>
     <ion-buttons slot="end" mode="md" [routerLink]="['/checkout']">
       <ion-button>
@@ -39,7 +39,7 @@
         }
         <ion-list lines="none" class="billing">
           <ion-list-header>
-            <ion-label color="danger">Bill Details:</ion-label>
+            <ion-label style="color: #9D0A10;">Bill Details:</ion-label>
           </ion-list-header>
           <ion-item-group>
             <ion-item>
@@ -59,7 +59,7 @@
 
         <ion-list>
           <ion-list-header>
-            <ion-label>Delivery Address:</ion-label>
+            <ion-label style="color: #9D0A10;">Delivery Address:</ion-label>
           </ion-list-header>
           <ion-item>
             <ion-label>
@@ -71,15 +71,9 @@
               <p>{{ billingAddress.country }}</p>
             </ion-label>
           </ion-item>
+          <ion-button expand="block" shape="round" mode="ios" (click)="completeOrder()" [routerLink]="['/payment']">
+            Complete Order
+          </ion-button>
         </ion-list>
 </ion-content>
 
-@if (model) {
-  <ion-footer>
-    <ion-toolbar>
-      <ion-button expand="block" shape="round" color="danger" mode="ios" (click)="completeOrder()" [routerLink]="['/payment-method']">
-        Complete Order
-      </ion-button>
-    </ion-toolbar>
-  </ion-footer>
-}

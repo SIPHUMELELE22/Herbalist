@@ -1,9 +1,9 @@
-<ion-header class="ion-no-border">
-  <ion-toolbar color="danger">
-    <ion-title>Nkunzebomvu Herbals</ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button menu="main-menu"></ion-menu-button>
     </ion-buttons>
+    <ion-title>Nkunzebomvu Herbals</ion-title>
     <ion-buttons slot="end">
       <ion-button fill="clear" size="large" color="dark" [routerLink]="['/', 'home', 'cart']">
         <ion-icon name="bag-handle" slot="icon-only"></ion-icon>
@@ -14,12 +14,10 @@
         }
       </ion-button>
     </ion-buttons>
-  </ion-toolbar> <br>
-  <ion-toolbar>
-    <ion-searchbar debounce="800" #searchInput mode="ios" placeholder="Search products..."
-      (ionInput)="onSearchChange($event)">
-    </ion-searchbar>
   </ion-toolbar>
+  <ion-searchbar debounce="800" #searchInput mode="ios" placeholder="Search products..."
+  (ionInput)="onSearchChange($event)">
+</ion-searchbar>
 </ion-header>
 
 <ion-content id="container">
@@ -53,7 +51,7 @@
             <div class="ion-padding">
             <ion-list class="vendorInfo">
               <ion-list-header>
-                <ion-label>Connect with Buyers - Join Our Vendor Network!</ion-label>
+                <h3>Connect with Buyers - Join Our Vendor Network!</h3>
               </ion-list-header>
               <form [formGroup]="vendorForm" (ngSubmit)="addVendor()">
                   
@@ -86,13 +84,9 @@
                       <ion-textarea formControlName="address" name="address" [autoGrow]="true" rows="4" class="input"
                         placeholder="Address"></ion-textarea>
                     </ion-item>
-                    <ion-footer>
-                  <ion-toolbar>
                     <ion-button type="submit" shape="round" expand="block" [strong]="true" mode="ios">
                       <ion-text>Become A Vendor</ion-text>
                     </ion-button>
-                  </ion-toolbar>
-                </ion-footer>
               </form>
             </ion-list>
           </div>
@@ -115,12 +109,12 @@
             </ion-toolbar>
           </ion-header>
           <ion-content class="ion-padding">
+            <div class="ion-padding">
             <ion-list class="appointmentData">
               <ion-list-header>
-                <ion-label>Book an Appointment - Secure your spot today!</ion-label>
+                <h3>Book an Appointment - Secure your spot today!</h3>
               </ion-list-header>
               <form>
-                <div class="ion-padding">
                   <ion-item>
                     <ion-input [(ngModel)]="appointmentData.name" name="name" class="input" placeholder="Name"
                       required=""></ion-input>
@@ -132,24 +126,23 @@
                     <ion-icon color="dark" name="call-outline"></ion-icon>
                   </ion-item>
                   <ion-item>
+                    <ion-input [(ngModel)]="appointmentData.time" presentation="time" name="time" type="time"></ion-input>
+                  </ion-item>
+                  <ion-item>
                     <ion-input [(ngModel)]="appointmentData.date" name="date" type="date"></ion-input>
                   </ion-item>
                   <ion-item>
-                    <ion-textarea [autoGrow]="true" [(ngModel)]="appointmentData.message" rows="3" name="message"
-                      placeholder="Message"></ion-textarea>
+                    <ion-textarea [(ngModel)]="appointmentData.message" name="message" [autoGrow]="true" rows="3"
+                      name="description" class="input" placeholder="Message"></ion-textarea>
                   </ion-item>
-                </div>
+                  <ion-button type="submit" (click)="saveAppointment()" shape="round" expand="block" [strong]="true"
+                  mode="ios">
+                  <ion-text>Book an Appointment</ion-text>
+                </ion-button>
               </form>
             </ion-list>
+          </div>
           </ion-content>
-          <ion-footer>
-            <ion-toolbar>
-              <ion-button type="submit" (click)="saveAppointment()" shape="round" expand="block" [strong]="true"
-                mode="ios">
-                <ion-text>Book an Appointment</ion-text>
-              </ion-button>
-            </ion-toolbar>
-          </ion-footer>
         </ng-template>
       </ion-modal>
     </ion-col>

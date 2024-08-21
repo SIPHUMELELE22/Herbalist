@@ -45,10 +45,6 @@ export const routes: Routes = [
     loadComponent: () => import('./auth/reset-password/reset-password.page').then( m => m.ResetPasswordPage)
   },
   {
-    path: 'account',
-    loadComponent: () => import('./pages/account/account.page').then( m => m.AccountPage)
-  },
-  {
     path: 'vendors',
     loadComponent: () => import('./pages/vendors/vendors.page').then( m => m.VendorsPage)
   },
@@ -65,12 +61,12 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/checkout/checkout.page').then( m => m.CheckoutPage)
   },
   {
-    path: 'order-summary',
-    loadComponent: () => import('./pages/order-summary/order-summary.page').then( m => m.OrderSummaryPage)
+    path: 'payment',
+    loadComponent: () => import('./pages/payment/payment.page').then( m => m.PaymentPage)
   },
   {
-    path: 'payment-method',
-    loadComponent: () => import('./pages/payment-method/payment-method.page').then( m => m.PaymentMethodPage)
+    path: 'order-summary',
+    loadComponent: () => import('./pages/order-summary/order-summary.page').then( m => m.OrderSummaryPage)
   },
   {
     path: 'order-detail',

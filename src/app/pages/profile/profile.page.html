@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="danger">
+  <ion-toolbar>
     <ion-title>Profile</ion-title>
-    <ion-buttons slot="end" mode="md" [routerLink]="['/account']">
+    <ion-buttons slot="end" mode="md" [routerLink]="['/home']">
       <ion-button>
         <ion-icon name="chevron-back-outline"></ion-icon>
         <ion-label>Back</ion-label>
@@ -15,8 +15,6 @@
       <ion-avatar style="display: inline-block; margin: 0 auto; font-size: 32px;">
         <ion-img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" /><br>
       </ion-avatar>
-        <br><ion-button (click)="signOut()" shape="round">Sign Out</ion-button>
-        <p></p>
       <form>
         <ion-item>
           <ion-label position="stacked">Name:</ion-label>
@@ -36,7 +34,7 @@
         </ion-item>
       </form>
       <p>
-        <br><ion-button (click)="confirmDelete()" expand="block" shape="round">Delete Account</ion-button>
+        <br><ion-button (click)="signOut()" expand="block" shape="round">Sign Out</ion-button>
       </p>
     </div>
 </ion-content>
